@@ -2,34 +2,19 @@
     <head>
         <title>NA Servants</title>
     <script>
-        var startingurl = "https://api.atlasacademy.io/export/NA/basic_servant.json";
         function loadstat(){
-            var serventhttp = new XMLHttpRequest();
-            serventhttp.open("GET",startingurl,true);
-            serventhttp.onreadystatechange = function(){
-                if(serventhttp.readyState ===4 && serventhttp.status ===200)
-                {
-                    var persons = JSON.parse(serventhttp.responseText);
-                    var tbltop = `<table>
-                                    <tr><th>id</th><th>name</th><th>type</th><th>className</th><th>face</th></tr>`;
-                    //main table content from rest call
-                    var main = "";
-                    for (i = 0; i < persons.length; i++)
-                    {
-                        main+= "<tr><td>" +persons[i].id+"</td><td>"+persons[i].name+"</td><td>"+persons[i].type+"</td><td>"
-                            +persons[i].className+"</td><td>"+persons[i].face+"</td></tr>";
-                    
-                    }
-                    var tblbottom = "</table>";
-                    var tbl = tbltop + main + tblbottom;
-                    document.getElementById("naservants").innerHTML = tbl;
-                }
-            }
-            serventhttp.send();
+            fetch("https://api.atlasacademy.io/export/NA/basic_servant.json").then(response =>{
+                const data = response.json();
+            })
+            .then(data=>{
+                console.log(data);
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        
         }
-        window.onload = function(){
-            loadstat();
-        }
+        loadstat()
     </script>
     </head>
     <body>
