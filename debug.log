@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 [0103/052152.704:ERROR:settings.cc(325)] Settings version is not 1
 [0103/053152.716:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+=======
+[0104/165144.819:ERROR:settings.cc(325)] Settings version is not 1
+[0104/170144.850:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+>>>>>>> eb9113735d234d997576873f9fa0d35dd2ae9b03
