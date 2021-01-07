@@ -1,23 +1,54 @@
 <html>
-    <head>
-        <title>NA Servants</title>
-    <script>
-        function loadstat(){
-            fetch("https://api.atlasacademy.io/export/NA/basic_servant.json").then(response =>{
-                const data = response.json();
-            })
-            .then(data=>{
-                console.log(data);
-            })
-            .catch(error=>{
-                console.log(error);
-            })
-        
-        }
-        loadstat()
-    </script>
-    </head>
-    <body>
-        <div id="naservants"> </div>
-    </body>
+   <head>
+      <title>NA Servants</title>
+      <style>
+         .user{
+         background-color:azure;
+         padding:1rem;
+         margin-bottom: 1rem;
+         }
+      </style>
+   </head>
+   <body>
+    <button onclick="sortN()">Try it</button>  
+    <div id="app"> </div>
+      
+   </body>
+   <script>
+      function loadstat(){
+          fetch("https://api.atlasacademy.io/export/NA/basic_servant.json")
+          .then(response =>{
+              if(!response.ok){
+                  
+                  throw Error("ERROR");
+              }
+              return response.json();
+          })
+          .then(data=>{
+              console.log(data);
+              const html = data.map(user=>{
+                  return `
+                  <div class="user">
+                    <p><img src="${user.face}" alt="${user.name}"></p>
+                    <p>Name: ${user.name}</p>
+                    <p>Type: ${user.type}</p>
+                  </div>
+                    `;
+                    html.name.sort();
+              })
+              .join("");
+              console.log(html);
+              
+              document.querySelector('#app').insertAdjacentHTML('afterbegin', html); 
+              
+          })
+          
+          .catch(error=>{
+              console.log(error);
+          })
+         
+      }
+    
+      loadstat()
+   </script>
 </html>
