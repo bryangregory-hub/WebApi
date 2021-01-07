@@ -10,11 +10,12 @@
       </style>
    </head>
    <body>
-    <button onclick="sortN()">Try it</button>  
+    <button onclick="loadstat()">try</button>
     <div id="app"> </div>
       
    </body>
    <script>
+       //This function servent displays 
       function loadstat(){
           fetch("https://api.atlasacademy.io/export/NA/basic_servant.json")
           .then(response =>{
@@ -32,9 +33,7 @@
                     <p><img src="${user.face}" alt="${user.name}"></p>
                     <p>Name: ${user.name}</p>
                     <p>Type: ${user.type}</p>
-                  </div>
-                    `;
-                    
+                  </div>`;
               })
               .join("");
               console.log(html);
@@ -48,12 +47,6 @@
           })
          
       }
-      function sortN()
-      {
-        user.name.sort();
-        document.querySelector('#app').insertAdjacentHTML('afterbegin', user);
-      }
-      loadstat()
    </script>
 
 </html>
