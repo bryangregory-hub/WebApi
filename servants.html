@@ -34,7 +34,7 @@
                     <p>Type: ${user.type}</p>
                   </div>
                     `;
-                    html.name.sort();
+                    
               })
               .join("");
               console.log(html);
@@ -48,7 +48,11 @@
           })
          
       }
-    
+      function sortN()
+      {
+        user.name.sort();
+        document.querySelector('#app').insertAdjacentHTML('afterbegin', user);
+      }
       loadstat()
    </script>
 </html>
