@@ -24,3 +24,57 @@
       flex: 1 1 calc(33% - 2rem);
     }
   } 
+.button{
+  size: 20px;
+}
+
+
+.row{
+
+padding-left:60px;
+padding-right:60px;
+display: flex;
+text-align: center;
+justify-content: center;
+float: left;
+width: 500px;
+
+}
+.user{
+box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
+border-radius: 20px;
+background-color: slategray;
+padding:1rem;
+margin-bottom: 1rem;
+flex: 33.33%;
+padding: 5px;
+
+align-self: center;
+}
+.bg-1 { 
+  background-image: url(imgs/The_Lostbelts.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 75%;
+  
+  
+}
+.bg-2 { 
+  background-color: #474e5d;
+  color: #ffffff;
+}
+
+.bg-3 { 
+  background-color: #ffffff;
+  color: #555555;
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+* {
+  box-sizing: border-box;
+}
+* {
+box-sizing: border-box;
+}
