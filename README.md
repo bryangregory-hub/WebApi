@@ -28,6 +28,7 @@ In this section, you should go over the different parts of your project, and des
 - Feature 2 - a button displays all the craft essence in fate go.
 - Feature 3 - a button reset the page.
 - Feature 4 - the page has a comment section.
+- Feature 5 - a button will allow users to go back to the top of the page.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 ### Features Left to Implement
