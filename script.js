@@ -1,3 +1,4 @@
+//calls on button to go back to the top
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -27,6 +28,7 @@ function topFunction() {
         }
         return response.json();
     })
+    //cycles throught data the display
     .then(data=>{
         console.log(data);
         const html = data.map(user=>{
@@ -66,6 +68,7 @@ function CraftEssence(){
         }
         return response.json();
     })
+    //cycles throught data the display
     .then(data=>{
         console.log(data);
         const html = data.map(user=>{

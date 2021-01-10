@@ -1,3 +1,4 @@
+/* button at the bottom of the website to display */
 #myBtn {
   display: none;
   position: fixed; 
@@ -21,6 +22,7 @@ background-color: #555;
   height: 350px;
   width: 350px;
 }
+/*this would sort each chara under a section*/
  .row{
  padding-left:60px;
  padding-right:60px;
@@ -31,6 +33,7 @@ background-color: #555;
  width: 500px;
  
  }
+ /*this would change the box the chara is in*/
  .user{
  box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
  border-radius: 20px;
@@ -41,6 +44,7 @@ background-color: #555;
  padding: 5px;
  align-self: center;
  }
+ /*this contols profile img and header text*/
  .bg-1 { 
  background-image: url(imgs/The_Lostbelts.jpg);
  background-repeat: no-repeat;
@@ -48,6 +52,7 @@ background-color: #555;
  background-size: 100% 75%;
  
  }
+ /*this controls the section where the data is going to go*/
  .bg-2 { 
    background-image: url(imgs/maxresdefault.jpg);
    background-repeat: no-repeat;
@@ -60,6 +65,7 @@ background-color: #555;
  background-color: #ffffff;
  color: #555555;
  }
+ /*this section onwrards contols the contact me section*/
  .container-fluid {
  padding-top: 70px;
  padding-bottom: 70px;
